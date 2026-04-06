@@ -1,0 +1,10 @@
+{
+  "note": null,
+  "pageNumbering": {
+    "status": "pass",
+    "message": "Нумерация страниц соответствует требованиям: титульный лист без номера, далее сквозная арабская нумерация внизу листа (центр/право).",
+    "failedRuleIds": [],
+    "hasFirstPageFailure": false,
+    "jumpPageNumbers": [1, 2, 3]
+  }
+}

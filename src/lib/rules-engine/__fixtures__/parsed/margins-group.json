@@ -1,0 +1,120 @@
+{
+  "config": {
+    "margins": {
+      "leftCm": 3,
+      "rightCm": 1,
+      "topCm": 2,
+      "bottomCm": 2,
+      "toleranceCm": 0.1
+    },
+    "pageFormat": {
+      "widthCm": 21,
+      "heightCm": 29.7,
+      "toleranceCm": 0.3
+    },
+    "typography": {
+      "minFontSizePt": 12,
+      "fontSizeTolerancePt": 0.2,
+      "expectedLineSpacing": 1.5,
+      "lineSpacingTolerance": 0.3,
+      "linePairMaxFactor": 2.6,
+      "minOverlapRatio": 0.45,
+      "indentExpectedCm": 1.25,
+      "indentToleranceCm": 0.3,
+      "indentDetectionMinCm": 0.2,
+      "indentDetectionMaxCm": 3,
+      "paragraphBreakFactor": 1.75,
+      "alignRightToleranceCm": 0.5,
+      "bodyFontTolerancePt": 1.5,
+      "minBodyLineWidthRatio": 0.35,
+      "blackChannelMax": 0.18,
+      "nonBlackWarnRatio": 0.05,
+      "nonBlackFailRatio": 0.12
+    },
+    "pageNumbering": {
+      "baselineGroupTolerancePt": 4,
+      "mergeDigitGapPt": 18,
+      "patternBandPaddingPt": 10
+    },
+    "documentStructure": {
+      "structuralElementNames": [
+        "СОДЕРЖАНИЕ",
+        "ОБОЗНАЧЕНИЯ И СОКРАЩЕНИЯ",
+        "ВВЕДЕНИЕ",
+        "ЗАКЛЮЧЕНИЕ",
+        "СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ"
+      ],
+      "requiredStructuralElements": [
+        {
+          "name": "ВВЕДЕНИЕ",
+          "id": "struct-elem-vvedenie"
+        },
+        {
+          "name": "ЗАКЛЮЧЕНИЕ",
+          "id": "struct-elem-zaklyuchenie"
+        },
+        {
+          "name": "СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ",
+          "id": "struct-elem-spisok-istochnikov"
+        }
+      ],
+      "sectionHeadingMinFontPt": 13,
+      "sectionHeadingExpectedFontPt": 14,
+      "sectionHeadingFontTolerancePt": 0.5,
+      "centerToleranceCm": 0.5
+    },
+    "marginGeometryEngine": "pdfium",
+    "ruleSeverities": {}
+  },
+  "parsed": {
+    "pageCount": 2,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "pageBox": {
+          "left": 0,
+          "bottom": 0,
+          "right": 600,
+          "top": 800
+        },
+        "textRuns": []
+      },
+      {
+        "pageNumber": 2,
+        "pageBox": {
+          "left": 0,
+          "bottom": 0,
+          "right": 600,
+          "top": 800
+        },
+        "textRuns": [
+          {
+            "text": "2",
+            "bounds": {
+              "left": 550,
+              "bottom": 18,
+              "right": 558,
+              "top": 28
+            }
+          }
+        ]
+      }
+    ],
+    "marginBoundsByPage": [
+      {
+        "left": 90,
+        "bottom": 70,
+        "right": 575,
+        "top": 740
+      },
+      {
+        "left": 95,
+        "bottom": 65,
+        "right": 560,
+        "top": 730
+      }
+    ],
+    "parserEngineLabel": "PDFium",
+    "parserNote": null
+  }
+}

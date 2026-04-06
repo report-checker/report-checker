@@ -1,0 +1,2 @@
+release_tag=chromium/7690
+asset=pdfium-linux-arm64.tgz

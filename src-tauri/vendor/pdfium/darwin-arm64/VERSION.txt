@@ -1,0 +1,2 @@
+release_tag=chromium/7749
+asset=pdfium-mac-arm64.tgz

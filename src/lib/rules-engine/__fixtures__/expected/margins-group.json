@@ -1,0 +1,17 @@
+{
+  "note": null,
+  "margins": {
+    "status": "fail",
+    "ruleStatuses": {
+      "margin-left": "pass",
+      "margin-right": "fail",
+      "margin-top": "pass",
+      "margin-bottom": "pass"
+    },
+    "rightRuleMessage": "Нарушения на страницах: 1. Худшее значение: 0.88 см; требование: не менее 1.00 см (допуск 0.10 см).",
+    "failedRuleIds": ["margin-right-page-1"],
+    "failedMessages": [
+      "Фактическое значение: 0.88 см; требование: не менее 1.00 см."
+    ]
+  }
+}

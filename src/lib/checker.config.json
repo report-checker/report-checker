@@ -1,0 +1,358 @@
+{
+  "marginGeometryEngine": "pdfium",
+  "showBaselineFilter": true,
+  "margins": {
+    "leftCm": 3,
+    "rightCm": 1.5,
+    "topCm": 2,
+    "bottomCm": 2,
+    "toleranceCm": 0.2
+  },
+  "pageFormat": {
+    "widthCm": 21,
+    "heightCm": 29.7,
+    "toleranceCm": 0.3
+  },
+  "typography": {
+    "minFontSizePt": 12,
+    "fontSizeTolerancePt": 0.2,
+    "expectedLineSpacing": 1.5,
+    "lineSpacingTolerance": 0.3,
+    "lineSpacingComparisonEpsilon": 0.015,
+    "lineSpacingPageFailMinViolations": 2,
+    "lineSpacingPageFailRatioThreshold": 0.08,
+    "linePairMaxFactor": 2.6,
+    "minOverlapRatio": 0.45,
+    "indentExpectedCm": 1.25,
+    "indentToleranceCm": 0.3,
+    "indentDetectionMinCm": 0.2,
+    "indentDetectionMaxCm": 3,
+    "paragraphBreakFactor": 1.75,
+    "alignRightToleranceCm": 0.5,
+    "bodyFontTolerancePt": 1.5,
+    "minBodyLineWidthRatio": 0.35,
+    "blackChannelMax": 0.18,
+    "nonBlackWarnRatio": 0.05,
+    "nonBlackFailRatio": 0.12
+  },
+  "pageNumbering": {
+    "baselineGroupTolerancePt": 4,
+    "mergeDigitGapPt": 18,
+    "patternBandPaddingPt": 10
+  },
+  "documentStructure": {
+    "structuralElementNames": [
+      "СОДЕРЖАНИЕ",
+      "ОБОЗНАЧЕНИЯ И СОКРАЩЕНИЯ",
+      "ВВЕДЕНИЕ",
+      "ЗАКЛЮЧЕНИЕ",
+      "СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ"
+    ],
+    "requiredStructuralElements": [
+      {
+        "name": "ВВЕДЕНИЕ",
+        "id": "struct-elem-vvedenie"
+      },
+      {
+        "name": "ЗАКЛЮЧЕНИЕ",
+        "id": "struct-elem-zaklyuchenie"
+      }
+    ],
+    "sectionHeadingMinFontPt": 13,
+    "sectionHeadingExpectedFontPt": 14,
+    "sectionHeadingFontTolerancePt": 0.5,
+    "centerToleranceCm": 0.5,
+    "figureCaptionObjectMaxGapCm": 7.8,
+    "figureCaptionObjectMaxCenterDistanceCm": 3.2,
+    "tableCaptionContentMaxGapCm": 3.4,
+    "tableCaptionLeftToleranceCm": 0.5,
+    "tableContinuationRightToleranceCm": 0.6,
+    "tableContinuationTopBandCm": 4.8
+  },
+  "titlePage": {
+    "allowedEducationalPrograms": [
+      "09.04.04 Программная инженерия",
+      "09.03.04 Программная инженерия",
+      "09.04.01 Компьютерные системы и технологии",
+      "Информатика и Вычислительная Техника"
+    ],
+    "allowedPracticeNames": [
+      "Научно-исследовательская работа",
+      "Учебная, ознакомительная практика"
+    ],
+    "practiceNameRegexes": [
+      "(?:о\\s+)?н\\s*аучно\\s*[-–—]?\\s*исследовательск[А-ЯЁA-Z0-9]*\\s+работ[А-ЯЁA-Z0-9]*",
+      "(?:об\\s+)?учебн[А-ЯЁA-Z0-9]*\\s*,?\\s*ознакомительн[А-ЯЁA-Z0-9]*\\s+практик[А-ЯЁA-Z0-9]*"
+    ],
+    "allowedYears": [
+      "2026"
+    ],
+    "studentGroupRegexes": [
+      "\\bP\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\b",
+      "\\bP\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\b"
+    ],
+    "studentNamePattern": "[А-ЯЁ][а-яё-]+\\s+[А-ЯЁ]\\.\\s*[А-ЯЁ]\\."
+  },
+  "rules": {
+    "formatting": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "text-set": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "page-format": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "typography": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "font-size": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "line-spacing": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "font-color": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "paragraph-indent": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "text-alignment": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "margins": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "margin-left": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "margin-right": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "margin-top": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "margin-bottom": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "page-numbering-section": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "page-numbering": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "document-structure": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "title-page": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "title-page-student": {
+      "enabled": true,
+      "severity": "warning",
+      "countInSummary": true
+    },
+    "title-page-education-program": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "title-page-practice-name": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "title-page-year": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "toc-presence": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "structural-elements": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "struct-elem-vvedenie": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "struct-elem-zaklyuchenie": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "struct-elem-spisok-istochnikov": {
+      "enabled": true,
+      "severity": "warning",
+      "countInSummary": true
+    },
+    "section-headings-format": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "section-numbering-sequence": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "toc-body-match": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "no-main-part-heading": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "appendices": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "appendices-in-toc": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "appendices-references": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "appendices-order-by-reference": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "appendices-after-sources": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "appendices-new-page": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "appendices-numbering": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "appendices-label-position": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "appendices-title-format": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "figures": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "figures-caption-format": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "figures-numbering": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "figures-references": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "figures-placement-by-reference": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "tables": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": false
+    },
+    "tables-caption-format": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "tables-numbering": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "tables-references": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "tables-placement-by-reference": {
+      "enabled": true,
+      "severity": "error",
+      "countInSummary": true
+    },
+    "detected-text-bounds": {
+      "enabled": true,
+      "severity": "warning",
+      "countInSummary": false
+    },
+    "detected-paragraph-bounds": {
+      "enabled": true,
+      "severity": "warning",
+      "countInSummary": false
+    }
+  }
+}

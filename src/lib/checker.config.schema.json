@@ -1,0 +1,841 @@
+{
+  "type": "object",
+  "properties": {
+    "marginGeometryEngine": {
+      "type": "string",
+      "title": "Движок геометрии",
+      "enum": [
+        "pdfium"
+      ]
+    },
+    "showBaselineFilter": {
+      "type": "boolean",
+      "title": "Показывать кнопку фильтра базовых результатов"
+    },
+    "margins": {
+      "type": "object",
+      "title": "Поля страницы",
+      "properties": {
+        "leftCm": {
+          "type": "number",
+          "title": "Левое поле (см)"
+        },
+        "rightCm": {
+          "type": "number",
+          "title": "Правое поле (см)"
+        },
+        "topCm": {
+          "type": "number",
+          "title": "Верхнее поле (см)"
+        },
+        "bottomCm": {
+          "type": "number",
+          "title": "Нижнее поле (см)"
+        },
+        "toleranceCm": {
+          "type": "number",
+          "title": "Допуск (см)"
+        }
+      },
+      "required": [
+        "leftCm",
+        "rightCm",
+        "topCm",
+        "bottomCm",
+        "toleranceCm"
+      ]
+    },
+    "pageFormat": {
+      "type": "object",
+      "title": "Формат страницы",
+      "properties": {
+        "widthCm": {
+          "type": "number",
+          "title": "Ширина (см)"
+        },
+        "heightCm": {
+          "type": "number",
+          "title": "Высота (см)"
+        },
+        "toleranceCm": {
+          "type": "number",
+          "title": "Допуск (см)"
+        }
+      },
+      "required": [
+        "widthCm",
+        "heightCm",
+        "toleranceCm"
+      ]
+    },
+    "typography": {
+      "type": "object",
+      "title": "Типографика",
+      "properties": {
+        "minFontSizePt": {
+          "type": "number",
+          "title": "Минимальный размер шрифта (pt)"
+        },
+        "fontSizeTolerancePt": {
+          "type": "number",
+          "title": "Допуск размера шрифта (pt)"
+        },
+        "expectedLineSpacing": {
+          "type": "number",
+          "title": "Ожидаемый межстрочный интервал"
+        },
+        "lineSpacingTolerance": {
+          "type": "number",
+          "title": "Допуск межстрочного интервала"
+        },
+        "lineSpacingComparisonEpsilon": {
+          "type": "number",
+          "title": "Line-spacing comparison epsilon"
+        },
+        "lineSpacingPageFailMinViolations": {
+          "type": "number",
+          "title": "Min failing pairs per page"
+        },
+        "lineSpacingPageFailRatioThreshold": {
+          "type": "number",
+          "title": "Failing-pair share threshold per page"
+        },
+        "linePairMaxFactor": {
+          "type": "number",
+          "title": "Максимальный коэффициент пары строк"
+        },
+        "minOverlapRatio": {
+          "type": "number",
+          "title": "Минимальное перекрытие строк"
+        },
+        "indentExpectedCm": {
+          "type": "number",
+          "title": "Ожидаемый отступ абзаца (см)"
+        },
+        "indentToleranceCm": {
+          "type": "number",
+          "title": "Допуск отступа абзаца (см)"
+        },
+        "indentDetectionMinCm": {
+          "type": "number",
+          "title": "Мин. отступ для определения (см)"
+        },
+        "indentDetectionMaxCm": {
+          "type": "number",
+          "title": "Макс. отступ для определения (см)"
+        },
+        "paragraphBreakFactor": {
+          "type": "number",
+          "title": "Коэффициент разрыва абзаца"
+        },
+        "alignRightToleranceCm": {
+          "type": "number",
+          "title": "Допуск выравнивания по правому краю (см)"
+        },
+        "bodyFontTolerancePt": {
+          "type": "number",
+          "title": "Допуск шрифта основного текста (pt)"
+        },
+        "minBodyLineWidthRatio": {
+          "type": "number",
+          "title": "Мин. ширина строки основного текста (доля)"
+        },
+        "blackChannelMax": {
+          "type": "number",
+          "title": "Максимальный канал чёрного"
+        },
+        "nonBlackWarnRatio": {
+          "type": "number",
+          "title": "Порог предупреждения нечёрного"
+        },
+        "nonBlackFailRatio": {
+          "type": "number",
+          "title": "Порог ошибки нечёрного"
+        }
+      },
+      "required": [
+        "minFontSizePt",
+        "fontSizeTolerancePt",
+        "expectedLineSpacing",
+        "lineSpacingTolerance",
+        "lineSpacingComparisonEpsilon",
+        "lineSpacingPageFailMinViolations",
+        "lineSpacingPageFailRatioThreshold",
+        "linePairMaxFactor",
+        "minOverlapRatio",
+        "indentExpectedCm",
+        "indentToleranceCm",
+        "indentDetectionMinCm",
+        "indentDetectionMaxCm",
+        "paragraphBreakFactor",
+        "alignRightToleranceCm",
+        "bodyFontTolerancePt",
+        "minBodyLineWidthRatio",
+        "blackChannelMax",
+        "nonBlackWarnRatio",
+        "nonBlackFailRatio"
+      ]
+    },
+    "pageNumbering": {
+      "type": "object",
+      "title": "Нумерация страниц",
+      "properties": {
+        "baselineGroupTolerancePt": {
+          "type": "number",
+          "title": "Допуск группировки базовой линии (pt)"
+        },
+        "mergeDigitGapPt": {
+          "type": "number",
+          "title": "Порог слияния цифр (pt)"
+        },
+        "patternBandPaddingPt": {
+          "type": "number",
+          "title": "Отступ полосы шаблона (pt)"
+        }
+      },
+      "required": [
+        "baselineGroupTolerancePt",
+        "mergeDigitGapPt",
+        "patternBandPaddingPt"
+      ]
+    },
+    "documentStructure": {
+      "type": "object",
+      "title": "Структура документа",
+      "properties": {
+        "structuralElementNames": {
+          "type": "array",
+          "title": "Названия структурных элементов",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requiredStructuralElements": {
+          "type": "array",
+          "title": "Обязательные структурные элементы",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Название"
+              },
+              "id": {
+                "type": "string",
+                "title": "ID"
+              }
+            },
+            "required": [
+              "name",
+              "id"
+            ]
+          }
+        },
+        "sectionHeadingMinFontPt": {
+          "type": "number",
+          "title": "Мин. размер шрифта заголовка (pt)"
+        },
+        "sectionHeadingExpectedFontPt": {
+          "type": "number",
+          "title": "Ожидаемый размер шрифта заголовка (pt)"
+        },
+        "sectionHeadingFontTolerancePt": {
+          "type": "number",
+          "title": "Допуск шрифта заголовка (pt)"
+        },
+        "centerToleranceCm": {
+          "type": "number",
+          "title": "Допуск центрирования (см)"
+        },
+        "figureCaptionObjectMaxGapCm": {
+          "type": "number",
+          "title": "Max figure caption-object vertical gap (cm)"
+        },
+        "figureCaptionObjectMaxCenterDistanceCm": {
+          "type": "number",
+          "title": "Max figure caption-object center distance (cm)"
+        },
+        "tableCaptionContentMaxGapCm": {
+          "type": "number",
+          "title": "Max caption-to-table-content vertical gap (cm)"
+        },
+        "tableCaptionLeftToleranceCm": {
+          "type": "number",
+          "title": "Table caption left alignment tolerance (cm)"
+        },
+        "tableContinuationRightToleranceCm": {
+          "type": "number",
+          "title": "Table continuation right alignment tolerance (cm)"
+        },
+        "tableContinuationTopBandCm": {
+          "type": "number",
+          "title": "Top band for continuation caption (cm)"
+        }
+      },
+      "required": [
+        "structuralElementNames",
+        "requiredStructuralElements",
+        "sectionHeadingMinFontPt",
+        "sectionHeadingExpectedFontPt",
+        "sectionHeadingFontTolerancePt",
+        "centerToleranceCm",
+        "figureCaptionObjectMaxGapCm",
+        "figureCaptionObjectMaxCenterDistanceCm",
+        "tableCaptionContentMaxGapCm",
+        "tableCaptionLeftToleranceCm",
+        "tableContinuationRightToleranceCm",
+        "tableContinuationTopBandCm"
+      ]
+    },
+    "titlePage": {
+      "type": "object",
+      "title": "Титульный лист",
+      "properties": {
+        "allowedEducationalPrograms": {
+          "type": "array",
+          "title": "Допустимые образовательные программы",
+          "items": {
+            "type": "string"
+          }
+        },
+        "allowedPracticeNames": {
+          "type": "array",
+          "title": "Допустимые наименования практики",
+          "items": {
+            "type": "string"
+          }
+        },
+        "practiceNameRegexes": {
+          "type": "array",
+          "title": "Regex для наименования практики",
+          "items": {
+            "type": "string"
+          }
+        },
+        "allowedYears": {
+          "type": "array",
+          "title": "Допустимые годы",
+          "items": {
+            "type": "string"
+          }
+        },
+        "studentGroupRegexes": {
+          "type": "array",
+          "title": "Regex для поиска группы обучающегося",
+          "items": {
+            "type": "string"
+          }
+        },
+        "studentNamePattern": {
+          "type": "string",
+          "title": "Regex для Фамилии и инициалов"
+        }
+      },
+      "required": [
+        "allowedEducationalPrograms",
+        "allowedPracticeNames",
+        "practiceNameRegexes",
+        "allowedYears",
+        "studentGroupRegexes",
+        "studentNamePattern"
+      ]
+    },
+    "rules": {
+      "type": "object",
+      "title": "Правила",
+      "properties": {
+        "formatting": {
+          "title": "Требования к оформлению отчета",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "text-set": {
+          "title": "Набор текста",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "page-format": {
+          "title": "Формат листа A4 (21 x 29,7 см)",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "typography": {
+          "title": "Параметры текста",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "font-size": {
+          "title": "Размер шрифта не менее 12 пт",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "line-spacing": {
+          "title": "Межстрочный интервал 1,5",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "font-color": {
+          "title": "Цвет шрифта — черный",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "paragraph-indent": {
+          "title": "Абзацный отступ 1,25 см",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "text-alignment": {
+          "title": "Выравнивание текста по ширине",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "margins": {
+          "title": "Поля страницы",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "margin-left": {
+          "title": "Левое поле",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "margin-right": {
+          "title": "Правое поле",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "margin-top": {
+          "title": "Верхнее поле",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "margin-bottom": {
+          "title": "Нижнее поле",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "page-numbering-section": {
+          "title": "Нумерация страниц",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "page-numbering": {
+          "title": "Нумерация страниц",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "document-structure": {
+          "title": "Структура документа",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "title-page": {
+          "title": "Титульный лист",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "title-page-student": {
+          "title": "Обучающийся",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "title-page-education-program": {
+          "title": "Образовательная программа",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "title-page-practice-name": {
+          "title": "Наименование практики",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "title-page-year": {
+          "title": "Год",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "toc-presence": {
+          "title": "Наличие «СОДЕРЖАНИЕ»",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "structural-elements": {
+          "title": "Заголовки структурных элементов",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "struct-elem-vvedenie": {
+          "title": "«ВВЕДЕНИЕ»",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "struct-elem-zaklyuchenie": {
+          "title": "«ЗАКЛЮЧЕНИЕ»",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "struct-elem-spisok-istochnikov": {
+          "title": "«СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ»",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "section-headings-format": {
+          "title": "Оформление заголовков разделов",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "toc-body-match": {
+          "title": "Соответствие содержания заголовкам",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "appendices": {
+          "title": "Оформление приложений",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "appendices-in-toc": {
+          "title": "Приложения в содержании",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "appendices-references": {
+          "title": "Ссылки на приложения",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "appendices-order-by-reference": {
+          "title": "Порядок приложений по упоминанию",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "appendices-after-sources": {
+          "title": "Приложения после списка источников",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "appendices-new-page": {
+          "title": "Каждое приложение с новой страницы",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "appendices-numbering": {
+          "title": "Нумерация приложений",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "appendices-label-position": {
+          "title": "Позиция номера приложения",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "appendices-title-format": {
+          "title": "Формат заголовка приложения",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "figures": {
+          "title": "Оформление рисунков",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "figures-caption-format": {
+          "title": "Подписи к рисункам",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "figures-numbering": {
+          "title": "Нумерация рисунков",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "figures-references": {
+          "title": "Ссылки на рисунки в тексте",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "figures-placement-by-reference": {
+          "title": "Размещение рисунка относительно первой ссылки",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "tables": {
+          "title": "Оформление таблиц",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "tables-caption-format": {
+          "title": "Оформление названий таблиц",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "tables-numbering": {
+          "title": "Нумерация таблиц",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "tables-references": {
+          "title": "Ссылки на таблицы в тексте",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "tables-placement-by-reference": {
+          "title": "Размещение таблицы относительно первой ссылки",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "detected-text-bounds": {
+          "title": "Границы текста (отладка)",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        },
+        "detected-paragraph-bounds": {
+          "title": "Границы абзацев (отладка)",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ruleSettings"
+            }
+          ]
+        }
+      },
+      "required": [
+        "formatting",
+        "text-set",
+        "page-format",
+        "typography",
+        "font-size",
+        "line-spacing",
+        "font-color",
+        "paragraph-indent",
+        "text-alignment",
+        "margins",
+        "margin-left",
+        "margin-right",
+        "margin-top",
+        "margin-bottom",
+        "page-numbering-section",
+        "page-numbering",
+        "document-structure",
+        "title-page",
+        "title-page-student",
+        "title-page-education-program",
+        "title-page-practice-name",
+        "title-page-year",
+        "toc-presence",
+        "structural-elements",
+        "struct-elem-vvedenie",
+        "struct-elem-zaklyuchenie",
+        "struct-elem-spisok-istochnikov",
+        "section-headings-format",
+        "toc-body-match",
+        "appendices",
+        "appendices-in-toc",
+        "appendices-references",
+        "appendices-order-by-reference",
+        "appendices-after-sources",
+        "appendices-new-page",
+        "appendices-numbering",
+        "appendices-label-position",
+        "appendices-title-format",
+        "figures",
+        "figures-caption-format",
+        "figures-numbering",
+        "figures-references",
+        "figures-placement-by-reference",
+        "tables",
+        "tables-caption-format",
+        "tables-numbering",
+        "tables-references",
+        "tables-placement-by-reference",
+        "detected-text-bounds",
+        "detected-paragraph-bounds"
+      ]
+    }
+  },
+  "required": [
+    "marginGeometryEngine",
+    "margins",
+    "pageFormat",
+    "typography",
+    "pageNumbering",
+    "documentStructure",
+    "titlePage",
+    "rules"
+  ],
+  "$defs": {
+    "ruleSettings": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "title": "Включено"
+        },
+        "severity": {
+          "type": "string",
+          "title": "Серьёзность",
+          "enum": [
+            "error",
+            "warning"
+          ]
+        },
+        "countInSummary": {
+          "type": "boolean",
+          "title": "Учитывать в сводке"
+        }
+      },
+      "required": [
+        "enabled",
+        "severity",
+        "countInSummary"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
